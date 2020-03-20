@@ -18,5 +18,5 @@ spring:
 #          username: 2531700373@qq.com
 #          password: Zjjwan1314
           search-paths:
-            - ConfigTest2
+            - ConfigTest23
           default-label: master
