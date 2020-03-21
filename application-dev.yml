@@ -1,14 +1,16 @@
 
+server:
+  port: 3355
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
       defaultZone: http://server7001.com:7001/eureka
   instance:
-    instance-id: configclient-3366
+    instance-id: configclient-3355
     prefer-ip-address: true
 spring:
   application:
-    name: config-client3366
+    name: config-client3355
   cloud:
     config:
       uri: http://localhost:3344
