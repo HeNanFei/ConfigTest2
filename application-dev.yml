@@ -1,20 +1,30 @@
+server:
+  port: 3366
 eureka:
-  client: 
+  client: #客户端注册进eureka服务列表内
     service-url:
       defaultZone: http://server7001.com:7001/eureka
   instance:
-    instance-id: configserver-3344
+    instance-id: configclient-3366
     prefer-ip-address: true
 spring:
   application:
-    name: config-server7001
+    name: config-client3366
   cloud:
     config:
-      server:
-        git:
-          uri: https://github.com/HeNanFei/ConfigTest2.git
-#          username: 2531700373@qq.com
-#          password: Zjjwan1314
-          search-paths:
-            - ConfigTest23
-          default-label: master
+      uri: http://localhost:3344
+      profile: dev
+      label: master
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
