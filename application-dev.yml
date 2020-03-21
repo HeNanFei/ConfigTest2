@@ -10,7 +10,7 @@ eureka:
     prefer-ip-address: true
 spring:
   application:
-    name: nimadegebi
+    name: 传统美德本特克
   cloud:
     config:
       uri: http://localhost:3344
